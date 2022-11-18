@@ -35,7 +35,9 @@ RUN \
     apt-get clean autoclean && \
     apt-get autoremove --yes && \
     rm -rf /var/lib/{apt,dpkg,cache,log}/ && \
-    chmod +x /opt/gdg/bin/gdg
+    chmod +x /opt/gdg/bin/gdg && \
+    mkdir /opt/gdg/bin/conf && \
+    chmod 777 /opt/gdg/bin/conf
 
 # Create appuser
 RUN useradd -m  gdg
