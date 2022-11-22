@@ -37,7 +37,8 @@ RUN \
     rm -rf /var/lib/{apt,dpkg,cache,log}/ && \
     chmod +x /opt/gdg/bin/gdg && \
     mkdir /opt/gdg/bin/conf && \
-    chmod 777 /opt/gdg/bin/conf
+    chmod 777 /opt/gdg/bin/conf && \
+    mkdir -p prod/dashboards/General
 
 # Create appuser
 RUN useradd -m  gdg
